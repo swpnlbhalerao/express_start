@@ -1,0 +1,24 @@
+
+<h2 class="text-center mb-3">{{tittle}}</h2>
+<form action="/api/members" method="post">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" name="name"/>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" name="email"/>
+    </div>
+
+<button type="submit" class="btn btn-success" >Add Member</button>
+
+</form>
+
+   <h4>Members</h4>
+   <ui class="list-group"> 
+    {{#each members}}
+    <li class="list-group-item"
+    > {{this.name}}  : {{this.email}} </li>
+    {{/each}}
+  </ui>
